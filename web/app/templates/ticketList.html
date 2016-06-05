@@ -1,0 +1,31 @@
+<div class="ticket-list">
+    <div ng-if="highPriority && highPriority.length > 0" class="high-priority">
+      <h2>High Priority</h2>
+      <div ng-repeat="item in highPriority">
+        <table>
+          <tr class="table-header"><td>Incident ID</td><td>Caller Name</td><td>Message</td><td>Confidence</td><td>Remove</td></tr>
+          <tr class="item-text"><td>{{item.incidentID}}</td><td>{{item.callerName}}</td><td>{{item.message}}</td><td>{{item.confidence | number:2}}</td><td><button ng-click="removeItem(item._id)">Remove</button></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div ng-if="mediumPriority && mediumPriority.length > 0" class="medium-priority">
+      <h2>Medium Priority</h2>
+      <div ng-repeat="item in mediumPriority">
+        <table>
+          <tr class="table-header"><td>Incident ID</td><td>Caller Name</td><td>Message</td><td>Confidence</td><td>Remove</td></tr>
+          <tr class="item-text"><td>{{item.incidentID}}</td><td>{{item.callerName}}</td><td>{{item.message}}</td><td>{{item.confidence | number:2}}</td><td><button ng-click="removeItem(item._id)">Remove</button></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div ng-if="lowPriority && lowPriority.length > 0" class="low-priority">
+      <h2>Low Priority</h2>
+      <div ng-repeat="item in lowPriority">
+        <table>
+          <tr class="table-header"><td>Incident ID</td><td>Caller Name</td><td>Message</td><td>Confidence</td><td>Remove</td></tr>
+          <tr class="item-text"><td>{{item.incidentID}}</td><td>{{item.callerName}}</td><td>{{item.message}}</td><td>{{item.confidence | number:2}}</td><td><button ng-click="removeItem(item._id)">Remove</button></td></tr>
+        </table>
+      </div>
+    </div>
+</div>

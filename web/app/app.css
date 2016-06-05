@@ -1,0 +1,83 @@
+/* app css stylesheet */
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+/* Regular app css */
+
+.container {
+  min-height: 1000px;
+}
+
+.page-footer {
+  height: 200px;
+  background-color: black;
+  width: 100%;
+}
+
+.page-header {
+  padding-left: 50px;
+}
+
+.high-priority .item-text {
+  color: red;
+}
+
+.medium-priority .item-text {
+  color: orange;
+}
+
+.low-priority .item-text {
+  color: green;
+}
+
+table, td {
+    background-color: beige;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+button {
+  color: black;
+}
+
+.table-header {
+  font-weight: bold;
+}
+
+
+td {
+  width: 200px
+}
